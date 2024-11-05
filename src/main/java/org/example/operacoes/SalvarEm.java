@@ -7,14 +7,14 @@ import org.example.tipos.Word;
 public class SalvarEm implements Visitor {
 
     public String visitarPDF(PDF pdf) {
-        return "O documento já está em PDF.";
+        return "Salvando arquivo em PDF: " + pdf.getConteudo();
     }
 
     public String visitarWord(Word word) {
-        return "Salvando documento Word como PDF: " + word.getConteudo();
+        return "Salvando arquivo em Word: " + word.getConteudo();
     }
 
     public String visitarExcel(Excel excel) {
-        return "Salvando documento Excel como PDF: " + excel.getConteudo();
+        return "Salvando arquivo em Excel: " + excel.getConteudo();
     }
 }
