@@ -34,21 +34,21 @@ class VisitorTest {
     }
 
     @Test
-    void deveSalvarPDFEmPDF() {
+    void deveSalvarPDF() {
         PDF pdf = new PDF("Conteúdo do PDF");
         SalvarEm visitor = new SalvarEm();
         assertEquals("Salvando arquivo em PDF: Conteúdo do PDF", pdf.aceitar(visitor));
     }
 
     @Test
-    void deveSalvarWordEmPDF() {
+    void deveSalvarWord() {
         Word word = new Word("Conteúdo do Word");
         SalvarEm visitor = new SalvarEm();
         assertEquals("Salvando arquivo em Word: Conteúdo do Word", word.aceitar(visitor));
     }
 
     @Test
-    void deveSalvarExcelEmPDF() {
+    void deveSalvarExcel() {
         Excel excel = new Excel("Conteúdo do Excel");
         SalvarEm visitor = new SalvarEm();
         assertEquals("Salvando arquivo em Excel: Conteúdo do Excel", excel.aceitar(visitor));
